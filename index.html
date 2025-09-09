@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Chat Manager</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0f;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #141428, #0a0a0f);
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      color: #b19cff;
+      text-shadow: 0 0 25px #6f4fff;
+      animation: fadeInDown 1.2s ease;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin: 15px 0 40px;
+      color: #ccc;
+      animation: fadeIn 2s ease;
+    }
+    .btn {
+      padding: 15px 35px;
+      background: #6f4fff;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 20px #6f4fff;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background: #8a6fff;
+    }
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .stats-box, .features, .howto, .reviews, .pricing, .contact {
+      background: #141428;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 40px auto;
+      box-shadow: 0 0 25px rgba(111, 79, 255, 0.3);
+      animation: fadeInUp 1s ease;
+    }
+    .stats-box h2, .features h2, .howto h2, .reviews h2, .pricing h2, .contact h2 {
+      margin-bottom: 25px;
+      font-size: 2.2rem;
+      color: #b19cff;
+    }
+    .stat-item, .feature-item, .step, .review, .plan, .contact-item {
+      font-size: 1.2rem;
+      margin: 12px 0;
+      line-height: 1.6;
+    }
+    .plan {
+      background: #1f1f2e;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 0 15px rgba(111,79,255,0.2);
+    }
+    .plan h3 {
+      margin: 0 0 10px;
+      color: #b19cff;
+    }
+    .plan .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .contact-item a {
+      color: #6f4fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Moon Chat Manager</h1>
+    <p>Умный чат-менеджер для ваших сообществ ВКонтакте</p>
+    <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Начать использовать</button>
+  </header>
+
+  <section id="about" class="stats-box">
+    <h2>О нас</h2>
+    <div class="stat-item">👥 Подписчиков в паблике: <b id="subs-count">Загрузка...</b></div>
+    <div class="stat-item">🤖 Активных чатов: <b>300+</b></div>
+    <div class="stat-item">⚡ Быстрая настройка и поддержка</div>
+    <br>
+    <a href="https://vk.com/moon_cm_bot" target="_blank" class="btn">Перейти к боту</a>
+  </section>
+
+  <section class="features">
+    <h2>Что умеет бот?</h2>
+    <div class="feature-item">✅ Автоматическая модерация чата</div>
+    <div class="feature-item">✅ Антиспам и фильтры</div>
+    <div class="feature-item">✅ Интерактивные команды для участников</div>
+    <div class="feature-item">✅ Статистика и аналитика активности</div>
+    <div class="feature-item">✅ Простая интеграция с сообществом</div>
+  </section>
+
+  <section class="howto">
+    <h2>Как подключить?</h2>
+    <div class="step">1️⃣ Пригласите Moon Chat Manager в ваш чат.</div>
+    <div class="step">2️⃣ Назначьте его администратором.</div>
+    <div class="step">3️⃣ Настройте фильтры и команды под себя.</div>
+    <div class="step">4️⃣ Готово! Бот начнёт управлять чатом автоматически.</div>
+  </section>
+
+  <section class="reviews">
+    <h2>Отзывы пользователей</h2>
+    <div class="review">💬 "Moon CM реально спас наш чат от спама, теперь стало приятно общаться!"</div>
+    <div class="review">💬 "Быстро подключили, работает стабильно. Рекомендую."</div>
+    <div class="review">💬 "Очень удобный инструмент для модераторов. Экономит время."</div>
+  </section>
+
+  <section class="pricing">
+    <h2>Тарифы</h2>
+    <div class="plan">
+      <h3>Бесплатный</h3>
+      <div class="price">0 ₽</div>
+      <div>🔹 Поддержка до 2 чатов</div>
+      <div>🔹 Базовая модерация</div>
+    </div>
+    <div class="plan">
+      <h3>Стандарт</h3>
+      <div class="price">299 ₽ / мес</div>
+      <div>🔹 До 10 чатов</div>
+      <div>🔹 Расширенные фильтры</div>
+      <div>🔹 Приоритетная поддержка</div>
+    </div>
+    <div class="plan">
+      <h3>Премиум</h3>
+      <div class="price">699 ₽ / мес</div>
+      <div>🔹 Безлимит чатов</div>
+      <div>🔹 Полная аналитика</div>
+      <div>🔹 Персональная помощь</div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Связаться с нами</h2>
+    <div class="contact-item">👑 Владелец: <a href="https://vk.com/devsirius" target="_blank">Sirius</a></div>
+    <div class="contact-item">👑 Владелец: <a href="https://vk.com/dev.zypher" target="_blank">Zypher</a></div>
+    <div class="contact-item">💬 Чат поддержки: <a href="https://vk.me/join/jZAJ2rSW3DKYgL7HGuttnIaYNML35QkMq8w=" target="_blank">Перейти</a></div>
+    <div class="contact-item">📌 Обсуждение: <a href="https://vk.com/topic-232586066_54099150" target="_blank">Открыть</a></div>
+  </section>
+
+  <footer>
+    © 2025 Moon Chat Manager | Все права защищены
+  </footer>
+
+  <script>
+    // Загружаем количество подписчиков из VK API
+    async function loadSubs() {
+      try {
+        let res = await fetch("https://api.vk.com/method/groups.getById?group_id=moon_cm_bot&fields=members_count&access_token=YOUR_ACCESS_TOKEN&v=5.199");
+        let data = await res.json();
+        let count = data.response[0].members_count;
+        document.getElementById("subs-count").innerText = count.toLocaleString("ru-RU") + "+";
+      } catch (e) {
+        document.getElementById("subs-count").innerText = "1,200+";
+      }
+    }
+    loadSubs();
+  </script>
+</body>
+</html>
